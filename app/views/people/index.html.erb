@@ -1,0 +1,45 @@
+
+
+<h1>RBC Directory</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Household</th>
+      <th>Home phone</th>
+      <th>Cell phone</th>
+      <th>Email</th>
+      <th>Role</th>
+      <th>Username</th>
+      <th>Password</th>
+      <th>Notes</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @people.each do |person| %>
+      <tr>
+        <td><%= person.name %></td>
+        <td><%= person.household %></td>
+        <td><%= person.home_phone %></td>
+        <td><%= person.cell_phone %></td>
+        <td><%= person.email %></td>
+        <td><%= person.role %></td>
+        <td><%= person.username %></td>
+        <td><%= person.password %></td>
+        <td><%= person.notes %></td>
+        <td><%= link_to 'Show', person %></td>
+        <td><%= link_to 'Edit', edit_person_path(person) %></td>
+        <td><%= link_to 'Destroy', person, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Person', new_person_path %>

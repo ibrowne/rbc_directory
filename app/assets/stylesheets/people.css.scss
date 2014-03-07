@@ -1,0 +1,13 @@
+// Place all the styles related to the people controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+h1 { color:red; }
+
+table {
+  border-collapse: collapse;
+  width: 90%;
+  margin: 0 auto;
+  th { background: #aaa; }
+  td { background: #eee; }
+}
